@@ -22,16 +22,20 @@ public class ClassePrincipale {
 	 * Le carré de 5 est 25.
 	 */
 	public static void exercice1() {
+		// Étape 1 : déclaration des variables
 		int nombreUtilisateur, resultat;
 		
+		// Étape 2 : récupération des données de la part de l'utilisateur
 		Scanner toto = new Scanner(System.in);
 		
 		System.out.println("Entrez un entier :");
 		
 		nombreUtilisateur = toto.nextInt();
 		
+		// Étape 3 : réalisation du calcul demandé dans l'énoncé
 		resultat = nombreUtilisateur * nombreUtilisateur;
 		
+		// Étape 4 : Affichage du résultat pour l'utilisateur
 		System.out.println("Le carré de " + nombreUtilisateur + " est " + resultat);
 	}
 	
@@ -45,8 +49,10 @@ public class ClassePrincipale {
 	 * Vous devez prévoir 3 pots pour couvrir les 13.2 m².
 	 */
 	public static void exercice2() {
+		// Étape 1 : déclaration des variables
 		double largeur, hauteur, surfaceParPot, surfaceTotale, resultat, nombrePots;
-		
+
+		// Étape 2 : récupération des données de la part de l'utilisateur
 		Scanner s = new Scanner(System.in);
 		
 		System.out.print("Largeur en m : ");
@@ -57,11 +63,13 @@ public class ClassePrincipale {
 		
 		System.out.print("Surface couverte par un pot en m² : ");
 		surfaceParPot = s.nextDouble();
-		
+
+		// Étape 3 : réalisation du calcul demandé dans l'énoncé
 		surfaceTotale = largeur * hauteur;
 		resultat = surfaceTotale / surfaceParPot;
 		nombrePots = Math.ceil(resultat);
-		
+
+		// Étape 4 : Affichage du résultat pour l'utilisateur
 		System.out.print("Vous devez prévoir " + nombrePots + " pots pour couvrir les " +  surfaceTotale + " m²");;
 	}
 	
@@ -78,9 +86,11 @@ public class ClassePrincipale {
 	 * La moyenne est 4.2, l'écart-type est 2.638.
 	 */
 	public static void exercice3() {
+		// Étape 1 : déclaration des variables
 		float nombre1, nombre2, nombre3, nombre4, nombre5;
 		double moyenne, ecartType;
-		
+
+		// Étape 2 : récupération des données de la part de l'utilisateur
 		System.out.println("Valeur 1 : ");
 		Scanner s = new Scanner(System.in);
 		nombre1 = Math.abs(s.nextFloat());
@@ -96,7 +106,8 @@ public class ClassePrincipale {
 		
 		System.out.println("Valeur 5 : ");
 		nombre5 = Math.abs(s.nextFloat());
-		
+
+		// Étape 3 : réalisation du calcul demandé dans l'énoncé
 		moyenne = (nombre1 + nombre2 + nombre3 + nombre4 + nombre5) / 5;
 		ecartType = Math.sqrt(
 				(		((nombre1 - moyenne) * (nombre1 - moyenne)) + 
@@ -106,7 +117,9 @@ public class ClassePrincipale {
 						((nombre5 - moyenne) * (nombre5 - moyenne))
 						) / 5
 				);
-		
+
+
+		// Étape 4 : Affichage du résultat pour l'utilisateur
 		System.out.println("La moyenne est "+moyenne+" et l'écart-type est "+ecartType+".");
 	}
 
@@ -121,25 +134,27 @@ public class ClassePrincipale {
 	 * Le nombre 1101 correspond à l'entier 13.
 	 */
 	public static void exercice4() {
-		int b1,b2,b3,b4; // données
-		int resultat; // résultat
-		
+		// Étape 1 : déclaration des variables
+		int b1, b2, b3, b4, resultat;
 
+		// Étape 2 : récupération des données de la part de l'utilisateur
 		System.out.print("Entrez le premier chiffre binaire (le plus à gauche) : ");
-		Scanner s = new Scanner(System.in);
-		b1 = s.nextInt();
+		Scanner scanner = new Scanner(System.in);
+		b1 = scanner.nextInt();
 		
 		System.out.print("Entrez le deuxième chiffre binaire : ");
-		b2 = s.nextInt();
+		b2 = scanner.nextInt();
 		
 		System.out.print("Entrez le troisième chiffre binaire : ");
-		b3 = s.nextInt();
+		b3 = scanner.nextInt();
 		
 		System.out.print("Entrez le quatrième chiffre binaire : ");
-		b4 = s.nextInt();
-		
+		b4 = scanner.nextInt();
+
+		// Étape 3 : réalisation du calcul demandé dans l'énoncé
 		resultat = b1*8 + b2*4 + b3*2 + b4;
-		
+
+		// Étape 4 : Affichage du résultat pour l'utilisateur
 		System.out.println("Le nombre " + b1 + b2 + b3 + b4 + " correspond à l'entier " + resultat + ".");
 	}
 	
@@ -150,18 +165,21 @@ public class ClassePrincipale {
 	 * Les chiffres sont 8, 4, 0 et 9.
 	 */
 	public static void exercice5() {
-		int entier; // données
-		int c1,c2,c3,c4; // résultat
-		
+		// Étape 1 : déclaration des variables
+		int entierUtilisateur, chiffre1, chiffre2, chiffre3, chiffre4;
+
+		// Étape 2 : récupération des données de la part de l'utilisateur
 		System.out.print("Entrez un entier : ");
 		Scanner s = new Scanner(System.in);
-		entier = s.nextInt();
-		
-		c1 = entier/1000;
-		c2 = (entier/100) %10;
-		c3 = (entier/10) %10;
-		c4 = entier % 10;
-		
-		System.out.println("Les chiffres sont "+c1+", "+c2+", "+c3+", "+c4+".");
+		entierUtilisateur = s.nextInt();
+
+		// Étape 3 : réalisation du calcul demandé dans l'énoncé
+		chiffre1 = entierUtilisateur/1000;
+		chiffre2 = (entierUtilisateur/100) %10;
+		chiffre3 = (entierUtilisateur/10) %10;
+		chiffre4 = entierUtilisateur % 10;
+
+		// Étape 4 : Affichage du résultat pour l'utilisateur
+		System.out.println("Les chiffres sont " + chiffre1 + ", " + chiffre2 + ", " + chiffre3 + ", " + chiffre4 + ".");
 	}
 }
