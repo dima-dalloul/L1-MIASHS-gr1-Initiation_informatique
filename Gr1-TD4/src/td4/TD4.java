@@ -11,9 +11,9 @@ public class TD4 {
 		
 		//exercice3();
 		
-		exercice4();
+		//exercice4();
 		
-		//exercice5();
+		exercice5();
 	}
 	
 	/**
@@ -137,7 +137,7 @@ public class TD4 {
 		// Step 3 : calculate the number of characters that are identical to the initial letter 
 		// The statement tells us not to count the 1st, so the loop starts from the 2nd character
 		for (int i = 1; i < userSentence.length(); i++) {
-			if(userSentence.charAt(i) == ' ') {
+			if(userSentence.charAt(i) == userSentence.charAt(0)) {
 				initialLetterCounter++;
 			}
 		}
